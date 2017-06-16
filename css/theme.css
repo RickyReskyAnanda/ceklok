@@ -2219,7 +2219,7 @@ section.section-custom-map-2 section.section {
 .home-intro .btn {
 	
 	margin : 37px 0 10px !important;
-	border-radius: 7px;
+	border-radius: 0px;
 	width: 100%;
 	height: 45px !important;
 }

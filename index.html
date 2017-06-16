@@ -110,21 +110,27 @@
 										<div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
 											<nav>
 												<ul class="nav nav-pills" id="mainNav">
-													<li class="dropdown active">
-														<a class="dropdown-toggle" href="index.html">
+													<li class="active">
+														<a class="active" href="index.html">
 															Gedung
 														</a>
 														
 													</li>
-													<li class="dropdown">
+													<li class="">
 														<a href="#">
 															Balai
 														</a>
 														
 													</li>
-													<li class="dropdown active">
+													<li class="">
 														<a href="index.html">
 															Ruang Rapat
+														</a>
+													</li>
+													<li class="">
+														<a href="index.html">
+															<i class="fa fa-user"></i>
+															Daftar | Masuk
 														</a>
 													</li>
 												</ul>
@@ -178,15 +184,31 @@
 						<div class="row">
 							<div class="col-md-4">
 								<p>Cari nama atau lokasi gedung</p>
-								<input class="form-control input-lg">
+								<input class="form-control input-lg" placeholder="Ketik nama lokasi atau gedung">
 							</div>
 							<div class="col-md-4">
 								<p>Rentang Tanggal</p>
-								<input class="form-control input-lg">
+								<div class="input-daterange input-group " data-plugin-datepicker>
+									
+									<input type="text" class="form-control input-lg" name="start" value="">
+									<span class="input-group-addon"> <i class="fa fa-calendar"></i> </span>
+									<input type="text" class="form-control input-lg" name="end">
+								</div>
+
 							</div>
 							<div class="col-md-2">
 								<p>Hari</p>
-								<input class="form-control input-lg">
+								<select class="form-control input-lg" >
+									<option value="1">1 Hari</option>
+									<option value="2">2 Hari</option>
+									<option value="3">3 Hari</option>
+									<option value="4">4 Hari</option>
+									<option value="5">5 Hari</option>
+									<option value="6">6 Hari</option>
+									<option value="7">7 Hari</option>
+									<option value="8">8 Hari</option>
+									<option value="9">9 Hari</option>
+								</select>
 							</div>
 							<div class="col-md-2">
 								<button class="btn btn-primary btn-lg"><i class="fa fa-search"></i> CARI</button>
@@ -197,45 +219,58 @@
 				<div class="container">
 					<div class="row mb-xl">
 						<div class="featured-boxes featured-boxes-style-4">
-						<div class="row">
-							<div class="col-md-3">
-								<div class="featured-box featured-box-primary featured-box-effect-5" style="height: 170px;">
-									<div class="box-content">
-										<i class="icon-featured fa fa-user"></i>
-										<h4>Gedung Murah</h4>
-										<p>Kemudahan pencarian membantu menemukan gedung murah sesuai keinginan anda</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="featured-box featured-box-secondary featured-box-effect-5" style="height: 170px;">
-									<div class="box-content">
-										<i class="icon-featured fa fa-book"></i>
-										<h4>Harga Jujur</h4>
-										<p>Harga awal gedung sama dengan harga di Ceklokasi.id</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="featured-box featured-box-tertiary featured-box-effect-5" style="height: 170px;">
-									<div class="box-content">
-										<i class="icon-featured fa fa-trophy"></i>
-										<h4>Tanpa Biaya Tambahan</h4>
-										<p>Biaya transaksi seluruh gedung di Ceklokasi.id tidak dikenakan biaya tambahan atau biaya tersembunyi</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="featured-box featured-box-quaternary featured-box-effect-5" style="height: 170px;">
-									<div class="box-content">
-										<i class="icon-featured fa fa-cogs"></i>
-										<h4>Akses Mudah</h4>
-										<p>Kemudahan akses booking online gedung dengan teknologi website terbaru</p>
-									</div>
-								</div>
-							</div>
+							<div class="row">
+								<div class="col-md-12 center">
+							<h2 class="word-rotator-title mb-sm">Kenapa Anda Harus <strong>Pesan <span class="word-rotate" data-plugin-options='{"delay": 2000, "animDelay": 300}'>
+								<span class="word-rotate-items">
+									<span>Gedung</span>
+									<span>Balai</span>
+									<span>Ruang Rapat</span>
+								</span>
+							</span></strong> Online di Ceklokasi.id ?</h2>
+							
 						</div>
-					</div>						
+
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="featured-box featured-box-primary featured-box-effect-5" style="height: 170px;">
+										<div class="box-content">
+											<i class="icon-featured fa fa-user"></i>
+											<h4>Gedung Murah</h4>
+											<p>Kemudahan pencarian membantu menemukan gedung murah sesuai keinginan anda</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="featured-box featured-box-secondary featured-box-effect-5" style="height: 170px;">
+										<div class="box-content">
+											<i class="icon-featured fa fa-book"></i>
+											<h4>Harga Jujur</h4>
+											<p>Harga awal gedung sama dengan harga di Ceklokasi.id</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="featured-box featured-box-tertiary featured-box-effect-5" style="height: 170px;">
+										<div class="box-content">
+											<i class="icon-featured fa fa-trophy"></i>
+											<h4>Tanpa Biaya Tambahan</h4>
+											<p>Biaya transaksi seluruh gedung di Ceklokasi.id tidak dikenakan biaya tambahan atau biaya tersembunyi</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="featured-box featured-box-quaternary featured-box-effect-5" style="height: 170px;">
+										<div class="box-content">
+											<i class="icon-featured fa fa-cogs"></i>
+											<h4>Akses Mudah</h4>
+											<p>Kemudahan akses booking online gedung dengan teknologi website terbaru</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>						
 					</div>
 				</div>
 				<section class="section section-default section-no-border">

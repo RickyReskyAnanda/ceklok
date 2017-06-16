@@ -2898,7 +2898,7 @@ html[dir="rtl"] #header .tip.skin:before {
 @media (min-width: 992px) {
 	#header .header-nav-main nav > ul > li.open > a,
 	#header .header-nav-main nav > ul > li:hover > a {
-		background: #2aafea;
+		background: #3192f9;
 	}
 
 	#header .header-nav-main nav > ul > li.dropdown .dropdown-menu {
@@ -3282,8 +3282,8 @@ html #header .header-top.header-top-secondary .dropdown-menu a:focus {
 }
 
 html #header .header-top.header-top-tertiary {
-	background: #3a3a3a;
-	border-top-color: #2d2d2d;
+	background: #3192f9;
+	border-top-color: #3192f9;
 }
 
 html #header .header-top.header-top-tertiary .header-nav-top ul > li.open > a {
@@ -4280,7 +4280,7 @@ html .home-intro-secondary {
 }
 
 html .home-intro-tertiary {
-	background: #3a3a3a;
+	background: #fa9d00;
 }
 
 html .home-intro-quaternary {

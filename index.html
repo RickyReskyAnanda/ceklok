@@ -47,8 +47,30 @@
 
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="css/custom.css">
-		<script src="vendor/jquery/jquery.min.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Admin Extension Specific Page Vendor CSS -->
+
+		<link rel="stylesheet" href="admin/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css" />
+		<link rel="stylesheet" href="admin/assets/vendor/jquery-ui/jquery-ui.css" />
+		<link rel="stylesheet" href="admin/assets/vendor/jquery-ui/jquery-ui.theme.css" />
+		<link rel="stylesheet" href="admin/assets/vendor/select2/css/select2.css" />
+		<link rel="stylesheet" href="admin/assets/vendor/select2-bootstrap-theme/select2-bootstrap.css" />
+		<link rel="stylesheet" href="admin/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css" />
+		
+		<link rel="stylesheet" href="admin/assets/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css" />
+		<link rel="stylesheet" href="admin/assets/vendor/dropzone/basic.css" />
+		<link rel="stylesheet" href="admin/assets/vendor/dropzone/dropzone.css" />
+		<link rel="stylesheet" href="admin/assets/vendor/bootstrap-markdown/css/bootstrap-markdown.min.css" />
+		
+		<link rel="stylesheet" href="admin/assets/vendor/codemirror/lib/codemirror.css" />
+		<link rel="stylesheet" href="admin/assets/vendor/codemirror/theme/monokai.css" />
+
+		<!-- Admin Extension CSS -->
+		<link rel="stylesheet" href="admin/assets/stylesheets/theme-admin-extension.css">
+
+		<!-- Admin Extension Skin CSS -->
+		<link rel="stylesheet" href="admin/assets/stylesheets/skins/extension.css">
+
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
@@ -90,24 +112,20 @@
 												<ul class="nav nav-pills" id="mainNav">
 													<li class="dropdown active">
 														<a class="dropdown-toggle" href="index.html">
-															Home
+															Gedung
 														</a>
-														<ul class="dropdown-menu">
-															<li>
-																<a href="index.html">
-																	Landing Page
-																</a>
-															</li>
-														</ul>
+														
 													</li>
 													<li class="dropdown">
-														<a class="dropdown-toggle" href="#">
-															Contact Us
+														<a href="#">
+															Balai
 														</a>
-														<ul class="dropdown-menu">
-															<li><a href="contact-us.html">Contact Us - Basic</a></li>
-															<li><a href="contact-us-advanced.php">Contact Us - Advanced</a></li>
-														</ul>
+														
+													</li>
+													<li class="dropdown active">
+														<a href="index.html">
+															Ruang Rapat
+														</a>
 													</li>
 												</ul>
 											</nav>
@@ -159,87 +177,8 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-4">
-								<input class="form-control" data-plugin-maxlength="" maxlength="20">
-							</div>
-							<div class="col-md-4">
-								<div class="input-group">
-									<span class="input-group-addon">
-										<i class="fa fa-calendar"></i>
-									</span>
-									<input type="text" data-plugin-datepicker="" class="form-control">
-								</div>
-							</div>
-							<div class="col-md-4">
-								<select data-plugin-selecttwo="" class="form-control populate select2-hidden-accessible" data-plugin-options="{ &quot;minimumInputLength&quot;: 2 }" tabindex="-1" aria-hidden="true">
-									<optgroup label="Alaskan/Hawaiian Time Zone">
-										<option value="AK">Alaska</option>
-										<option value="HI">Hawaii</option>
-									</optgroup>
-									<optgroup label="Pacific Time Zone">
-										<option value="CA">California</option>
-										<option value="NV">Nevada</option>
-										<option value="OR">Oregon</option>
-										<option value="WA">Washington</option>
-									</optgroup>
-									<optgroup label="Mountain Time Zone">
-										<option value="AZ">Arizona</option>
-										<option value="CO">Colorado</option>
-										<option value="ID">Idaho</option>
-										<option value="MT">Montana</option><option value="NE">Nebraska</option>
-										<option value="NM">New Mexico</option>
-										<option value="ND">North Dakota</option>
-										<option value="UT">Utah</option>
-										<option value="WY">Wyoming</option>
-									</optgroup>
-									<optgroup label="Central Time Zone">
-										<option value="AL">Alabama</option>
-										<option value="AR">Arkansas</option>
-										<option value="IL">Illinois</option>
-										<option value="IA">Iowa</option>
-										<option value="KS">Kansas</option>
-										<option value="KY">Kentucky</option>
-										<option value="LA">Louisiana</option>
-										<option value="MN">Minnesota</option>
-										<option value="MS">Mississippi</option>
-										<option value="MO">Missouri</option>
-										<option value="OK">Oklahoma</option>
-										<option value="SD">South Dakota</option>
-										<option value="TX">Texas</option>
-										<option value="TN">Tennessee</option>
-										<option value="WI">Wisconsin</option>
-									</optgroup>
-									<optgroup label="Eastern Time Zone">
-										<option value="CT">Connecticut</option>
-										<option value="DE">Delaware</option>
-										<option value="FL">Florida</option>
-										<option value="GA">Georgia</option>
-										<option value="IN">Indiana</option>
-										<option value="ME">Maine</option>
-										<option value="MD">Maryland</option>
-										<option value="MA">Massachusetts</option>
-										<option value="MI">Michigan</option>
-										<option value="NH">New Hampshire</option>
-										<option value="NJ">New Jersey</option>
-										<option value="NY">New York</option>
-										<option value="NC">North Carolina</option>
-										<option value="OH">Ohio</option>
-										<option value="PA">Pennsylvania</option>
-										<option value="RI">Rhode Island</option>
-										<option value="SC">South Carolina</option>
-										<option value="VT">Vermont</option>
-										<option value="VA">Virginia</option>
-										<option value="WV">West Virginia</option>
-									</optgroup>
-								</select>
-								<span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr" style="width: 540px;">
-									<span class="selection">
-										<span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-guyb-container">
-											<span class="select2-selection__rendered" id="select2-guyb-container" title="Alaska"></span>
-											<span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span>
-										</span>
-									</span>
-									<span class="dropdown-wrapper" aria-hidden="true"></span>
-								</span>
+								<p>Cari nama atau lokasi gedung</p>
+								<input class="form-control input-lg">
 							</div>
 						</div>
 					</div>
@@ -252,8 +191,8 @@
 								<div class="featured-box featured-box-primary featured-box-effect-5" style="height: 170px;">
 									<div class="box-content">
 										<i class="icon-featured fa fa-user"></i>
-										<h4>Loved by Customers</h4>
-										<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus.</p>
+										<h4>Gedung Murah</h4>
+										<p>Kemudahan pencarian membantu menemukan gedung murah sesuai keinginan anda</p>
 									</div>
 								</div>
 							</div>
@@ -261,8 +200,8 @@
 								<div class="featured-box featured-box-secondary featured-box-effect-5" style="height: 170px;">
 									<div class="box-content">
 										<i class="icon-featured fa fa-book"></i>
-										<h4>Well Documented</h4>
-										<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus.</p>
+										<h4>Harga Jujur</h4>
+										<p>Harga awal gedung sama dengan harga di Ceklokasi.id</p>
 									</div>
 								</div>
 							</div>
@@ -270,8 +209,8 @@
 								<div class="featured-box featured-box-tertiary featured-box-effect-5" style="height: 170px;">
 									<div class="box-content">
 										<i class="icon-featured fa fa-trophy"></i>
-										<h4>Winner</h4>
-										<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus.</p>
+										<h4>Tanpa Biaya Tambahan</h4>
+										<p>Biaya transaksi seluruh gedung di Ceklokasi.id tidak dikenakan biaya tambahan atau biaya tersembunyi</p>
 									</div>
 								</div>
 							</div>
@@ -279,8 +218,8 @@
 								<div class="featured-box featured-box-quaternary featured-box-effect-5" style="height: 170px;">
 									<div class="box-content">
 										<i class="icon-featured fa fa-cogs"></i>
-										<h4>Customizable</h4>
-										<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus. </p>
+										<h4>Akses Mudah</h4>
+										<p>Kemudahan akses booking online gedung dengan teknologi website terbaru</p>
 									</div>
 								</div>
 							</div>
@@ -638,10 +577,11 @@
 		</div>
 
 		<!-- Vendor -->
-		
+		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
 		<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
 		<script src="vendor/jquery-cookie/jquery-cookie.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 		<script src="vendor/common/common.min.js"></script>
 		<script src="vendor/jquery.validation/jquery.validation.min.js"></script>
 		<script src="vendor/jquery.stellar/jquery.stellar.min.js"></script>
@@ -655,16 +595,47 @@
 		
 		<!-- Theme Base, Components and Settings -->
 		<script src="js/theme.js"></script>
-		
-		<!-- Current Page Vendor and Views -->
-		<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-		<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+		<!-- Admin Extension Specific Page Vendor -->
+		<script src="admin/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="admin/assets/vendor/jquery-placeholder/jquery-placeholder.js"></script>
+		<script src="admin/assets/vendor/jquery-ui/jquery-ui.js"></script>
+		<script src="admin/assets/vendor/jqueryui-touch-punch/jqueryui-touch-punch.js"></script>
+		<script src="admin/assets/vendor/select2/js/select2.js"></script>
+		<script src="admin/assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+		<script src="admin/assets/vendor/jquery-maskedinput/jquery.maskedinput.js"></script>
+		<script src="admin/assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+		<script src="admin/assets/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+		<script src="admin/assets/vendor/bootstrap-timepicker/bootstrap-timepicker.js"></script>
+		<script src="admin/assets/vendor/fuelux/js/spinner.js"></script>
+		<script src="admin/assets/vendor/dropzone/dropzone.js"></script>
+		<script src="admin/assets/vendor/bootstrap-markdown/js/markdown.js"></script>
+		<script src="admin/assets/vendor/bootstrap-markdown/js/to-markdown.js"></script>
+		<script src="admin/assets/vendor/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+		<script src="admin/assets/vendor/codemirror/lib/codemirror.js"></script>
+		<script src="admin/assets/vendor/codemirror/addon/selection/active-line.js"></script>
+		<script src="admin/assets/vendor/codemirror/addon/edit/matchbrackets.js"></script>
+		<script src="admin/assets/vendor/codemirror/mode/javascript/javascript.js"></script>
+		<script src="admin/assets/vendor/codemirror/mode/xml/xml.js"></script>
+		<script src="admin/assets/vendor/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+		<script src="admin/assets/vendor/codemirror/mode/css/css.js"></script>
+		<script src="admin/assets/vendor/summernote/summernote.js"></script>
+		<script src="admin/assets/vendor/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+		<script src="admin/assets/vendor/ios7-switch/ios7-switch.js"></script>
+		<script src="admin/assets/vendor/bootstrap-confirmation/bootstrap-confirmation.js"></script>
+
+		<!-- Admin Extension -->
+		<script src="admin/assets/javascripts/theme.admin.extension.js"></script>
+
+		<!-- Admin Extension Examples -->
+		<script src="admin/assets/javascripts/forms/examples.advanced.form.js"></script>
 		
 		<!-- Theme Custom -->
 		<script src="js/custom.js"></script>
 		
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
+
 
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 		<script>

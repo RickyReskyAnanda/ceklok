@@ -4753,3 +4753,8 @@ ul.comments .comment-block,
 		border-radius: 0;
 	}
 }
+
+#footer .fa{
+	color: #FA9D00 !important;
+	border-color: #FA9D00 !important;
+}

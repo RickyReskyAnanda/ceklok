@@ -4918,7 +4918,7 @@ html.boxed .pricing-table .plan, html.boxed .pricing-table h3 {
 	border: 0;
 	padding: 0;
 	margin: 0;
-	border-radius: 0;
+	border-radius: 7px;
 }
 
 .thumb-info.thumb-info-no-borders .thumb-info-wrapper {

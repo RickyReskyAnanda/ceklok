@@ -41,14 +41,14 @@ li {
 #header .header-body {
 	background: #FFF;
 	border-top: 5px solid #EDEDED;
-	border-bottom: 1px solid transparent;
-	padding: 8px 0;
+	
+	padding: 8px 0 0;
 	-webkit-transition: min-height 0.3s ease;
 	-moz-transition: min-height 0.3s ease;
 	transition: min-height 0.3s ease;
 	width: 100%;
 	z-index: 1001;
-	min-height: 125px;
+	min-height: 100px;
 }
 
 #header .container {
@@ -127,8 +127,8 @@ li {
 }
 
 #header .header-top.header-top-style-3 {
-	margin-top: -16px;
-	margin-bottom: 10px;
+	margin-top: -14px;
+	margin-bottom: 5px;
 }
 
 #header .header-top.header-top-style-4 {

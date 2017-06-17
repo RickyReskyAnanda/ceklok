@@ -26,6 +26,9 @@ a:active {
     height: 42px !important;
     font-size: 16px !important;
 }
+footer .list{
+	font-size: larger;
+}
 
 html .heading-primary,
 html .lnk-primary,
@@ -4754,7 +4757,7 @@ ul.comments .comment-block,
 	}
 }
 
-#footer .fa{
-	color: #FA9D00 !important;
-	border-color: #FA9D00 !important;
+.faxx{
+	color: #fff !important;
+	border-color: #fff !important;
 }

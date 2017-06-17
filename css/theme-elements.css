@@ -3410,7 +3410,7 @@ hr.dashed, .divider.dashed {
 }
 
 hr.dashed:after, .divider.dashed:after {
-	border-top: 1px dashed #DBDBDB;
+	border-top: 1px dashed #2aafea;
 	content: "";
 	display: block;
 	height: 0;

@@ -13,6 +13,12 @@ a:focus {
 a:active {
 	color: #16a5e4;
 }
+.xyz{
+	padding: 0px 10px !important;
+}
+.abc{
+	padding: 10px 0px !important;
+}
 .form-control{
  border-radius: 0px !important;
 }

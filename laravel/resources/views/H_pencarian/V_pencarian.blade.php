@@ -205,7 +205,7 @@
 									<div class="col-sm-4">
 												<div class="row">
 													<div class="col-sm-12">
-														<input type="text" name="" class="form-control input-lg" placeholder="Masukkan nama gedung">
+														<input type="text" name="" class="form-control input-lg" placeholder="Masukkan nama gedung" id="sNamaTempat">
 													</div>
 													
 												</div>
@@ -229,33 +229,31 @@
 														<div class="row" style="margin-bottom: 10px;">
 															<div class="col-sm-6">
 																<div class="radio-custom radio-primary">
-																	<input type="radio" id="radioExample2" name="rad">
-																	<label for="radioExample2">Harga Tertinggi</label>
+																	<input type="radio" name="urutan" value="pup">
+																	<label>Harga Tertinggi</label>
 																</div>
 															</div>
 															<div class="col-sm-6">
 																<div class="radio-custom radio-primary">
-																	<input type="radio" id="radioExample2" name="rad">
-																	<label for="radioExample2">Harga Terendah</label>
+																	<input type="radio" name="urutan" value="pdown">
+																	<label>Harga Terendah</label>
 																</div>
 															</div>
 														</div>
 														<div class="row">
 															<div class="col-sm-6">
 																<div class="radio-custom radio-primary">
-																	<input type="radio" id="radioExample2" name="rad" checked>
-																	<label for="radioExample2">Popularitas</label>
+																	<input type="radio" name="urutan" value="pop" checked>
+																	<label>Popularitas</label>
 																</div>
 															</div>
 															<div class="col-sm-6">
 																<div class="radio-custom radio-primary">
-																	<input type="radio" id="radioExample2" name="rad">
-																	<label for="radioExample2">Penyewaan terbanyak</label>
+																	<input type="radio" name="urutan" value="lik">
+																	<label>Penyewaan terbanyak</label>
 																</div>
 															</div>
 														</div>
-														
-
 													</div>
 												</div>
 											</div>
@@ -296,8 +294,8 @@
 												<div class="row">
 													<div class="col-sm-12" style="color:#fa9d00">
 														<div class="checkbox-custom checkbox-default">
-															<input type="checkbox" checked="" id="checkboxExample1">
-															<label for="checkboxExample1"><strong>
+															<input type="checkbox" id="sstar" value="5s">
+															<label><strong>
 																<i class="fa fa-star"></i>
 																<i class="fa fa-star"></i>
 																<i class="fa fa-star"></i>
@@ -306,8 +304,8 @@
 															</label>
 														</div>
 														<div class="checkbox-custom checkbox-default">
-															<input type="checkbox" checked="" id="checkboxExample1">
-															<label for="checkboxExample1">
+															<input type="checkbox" id="sstar" value="4s">
+															<label>
 																<i class="fa fa-star"></i>
 																<i class="fa fa-star"></i>
 																<i class="fa fa-star"></i>
@@ -315,23 +313,23 @@
 															</label>
 														</div>
 														<div class="checkbox-custom checkbox-default">
-															<input type="checkbox" checked="" id="checkboxExample1">
-															<label for="checkboxExample1">
+															<input type="checkbox" id="sstar" value="3s">
+															<label>
 																<i class="fa fa-star"></i>
 																<i class="fa fa-star"></i>
 																<i class="fa fa-star"></i>
 															</label>
 														</div>
 														<div class="checkbox-custom checkbox-default">
-															<input type="checkbox" checked="" id="checkboxExample1">
-															<label for="checkboxExample1">
+															<input type="checkbox" id="sstar" value="2s">
+															<label>
 																<i class="fa fa-star"></i>
 																<i class="fa fa-star"></i>
 															</label>
 														</div>
 														<div class="checkbox-custom checkbox-default">
-															<input type="checkbox" checked="" id="checkboxExample1">
-															<label for="checkboxExample1">
+															<input type="checkbox" id="sstar" value="1s">
+															<label>
 																<i class="fa fa-star"></i>
 															</label>
 														</div>
@@ -353,14 +351,14 @@
 												<div class="row">
 													<div class="col-sm-12">
 														<div class="checkbox-custom checkbox-default">
-															<input type="checkbox" checked="" id="checkboxExample1">
-															<label for="checkboxExample1">
+															<input type="checkbox" class="sfasilitas" value="wifi">
+															<label>
 																WiFi
 															</label>
 														</div>
 														<div class="checkbox-custom checkbox-default">
-															<input type="checkbox" checked="" id="checkboxExample1">
-															<label cla>
+															<input type="checkbox" class="sfasilitas" value="parkir">
+															<label>
 																Tempat Parkir
 															</label>
 														</div>
@@ -382,20 +380,20 @@
 												<div class="row">
 													<div class="col-sm-12">
 														<div class="radio-custom radio-primary">
-															<input type="radio" id="radioExample2" name="radioExample" checked>
-															<label for="radioExample2">Semua</label>
+															<input type="radio" name="skapasitas" checked>
+															<label>Semua</label>
 														</div>
 														<div class="radio-custom radio-primary">
-															<input type="radio" id="radioExample2" name="radioExample" >
-															<label for="radioExample2">10-100</label>
+															<input type="radio" name="skapasitas">
+															<label>10-100</label>
 														</div>
 														<div class="radio-custom radio-primary">
-															<input type="radio" id="radioExample2" name="radioExample">
-															<label for="radioExample2">100-1.000</label>
+															<input type="radio" name="skapasitas">
+															<label>100-1.000</label>
 														</div>
 														<div class="radio-custom radio-primary">
-															<input type="radio" id="radioExample2" name="radioExample">
-															<label for="radioExample2">1.000-10.000</label>
+															<input type="radio" name="skapasitas">
+															<label>1.000-10.000</label>
 														</div>
 													</div>
 												</div>
@@ -406,7 +404,8 @@
 									</div>
 
 									<!-- ISI PENCARIAN -->
-									<div class="col-sm-8">
+									<div class="col-sm-8" id="sPencarian">
+										@for ($i = 0; $i < 10; $i++)
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="featured-box featured-box-primary featured-box-text-left" style="height: auto;">
@@ -451,189 +450,15 @@
 																		</button>
 																	</div>
 																</div>
-															
-
 															</div>
-															
 														</div>
-
-
-														
 													</div>
 												</div>
 											</div>
 										</div>
+									
+										@endfor
 
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="featured-box featured-box-primary featured-box-text-left" style="height: auto;">
-													<div class="box-content padnol">
-														<div class="row">
-															<div class="col-sm-4 padright">
-																<img src="{{ URL::to('public/front_assets/img/gallery/jalan.jpg')}}" class="img-responsive" alt="Foto">
-															</div>
-															<div class="col-sm-8">
-																<div class="row" style="margin-top: 5px;">
-																	<div class="col-sm-9">
-																		<h4><strong>Gedung Serbaguna RRI</strong></h4>
-																		<div title="Rated 5.00 out of 5" class="star-rating">
-																			<span style="width:90%"><strong class="rating">5.00</strong> out of 5</span>
-																		</div>
-																	</div>
-																	<div class="col-sm-3">
-																		<span class="label label-warning pull-right">89 booked</span>
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="col-sm-12">
-																		<i class="fa fa-map-marker"></i> Panakkukang
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="col-sm-12">
-																		<div class="heading heading-primary heading-border heading-bottom-border">
-																			<h5 class="heading-primary"><i class="fa fa-home"></i> Conference Hall</h5>
-																		</div>
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="col-sm-6">
-																		<div class="heading heading-secondary">
-																			<h4 class="heading-secondary"><strong>IDR 500.000</strong></h4>
-																		</div>
-																	</div>
-																	<div class="col-sm-6">
-																		<button class="btn btn-primary pull-right">
-																			Pesan >>
-																		</button>
-																	</div>
-																</div>
-															
-
-															</div>
-															
-														</div>
-
-
-														
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="featured-box featured-box-primary featured-box-text-left" style="height: auto;">
-													<div class="box-content padnol">
-														<div class="row">
-															<div class="col-sm-4 padright">
-																<img src="{{ URL::to('public/front_assets/img/gallery/jalan.jpg')}}" class="img-responsive" alt="Foto">
-															</div>
-															<div class="col-sm-8">
-																<div class="row" style="margin-top: 5px;">
-																	<div class="col-sm-9">
-																		<h4><strong>Gedung Serbaguna RRI</strong></h4>
-																		<div title="Rated 5.00 out of 5" class="star-rating">
-																			<span style="width:90%"><strong class="rating">5.00</strong> out of 5</span>
-																		</div>
-																	</div>
-																	<div class="col-sm-3">
-																		<span class="label label-warning pull-right">89 booked</span>
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="col-sm-12">
-																		<i class="fa fa-map-marker"></i> Panakkukang
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="col-sm-12">
-																		<div class="heading heading-primary heading-border heading-bottom-border">
-																			<h5 class="heading-primary"><i class="fa fa-home"></i> Conference Hall</h5>
-																		</div>
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="col-sm-6">
-																		<div class="heading heading-secondary">
-																			<h4 class="heading-secondary"><strong>IDR 500.000</strong></h4>
-																		</div>
-																	</div>
-																	<div class="col-sm-6">
-																		<button class="btn btn-primary pull-right">
-																			Pesan >>
-																		</button>
-																	</div>
-																</div>
-															
-
-															</div>
-															
-														</div>
-
-
-														
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="featured-box featured-box-primary featured-box-text-left" style="height: auto;">
-													<div class="box-content padnol">
-														<div class="row">
-															<div class="col-sm-4 padright">
-																<img src="{{ URL::to('public/front_assets/img/gallery/jalan.jpg')}}" class="img-responsive" alt="Foto">
-															</div>
-															<div class="col-sm-8">
-																<div class="row" style="margin-top: 5px;">
-																	<div class="col-sm-9">
-																		<h4><strong>Gedung Serbaguna RRI</strong></h4>
-																		<div title="Rated 5.00 out of 5" class="star-rating">
-																			<span style="width:90%"><strong class="rating">5.00</strong> out of 5</span>
-																		</div>
-																	</div>
-																	<div class="col-sm-3">
-																		<span class="label label-warning pull-right">89 booked</span>
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="col-sm-12">
-																		<i class="fa fa-map-marker"></i> Panakkukang
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="col-sm-12">
-																		<div class="heading heading-primary heading-border heading-bottom-border">
-																			<h5 class="heading-primary"><i class="fa fa-home"></i> Conference Hall</h5>
-																		</div>
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="col-sm-6">
-																		<div class="heading heading-secondary">
-																			<h4 class="heading-secondary"><strong>IDR 500.000</strong></h4>
-																		</div>
-																	</div>
-																	<div class="col-sm-6">
-																		<button class="btn btn-primary pull-right">
-																			Pesan >>
-																		</button>
-																	</div>
-																</div>
-															
-
-															</div>
-															
-														</div>
-
-
-														
-													</div>
-												</div>
-											</div>
-										</div>
 										<div class="row" style="margin-top: 20px;">
 											<div class="col-sm-6">
 												<button class="btn btn-default pull-right"><i class="fa fa-angle-left fa-lg"></i> Sebelumnya</button>
@@ -656,6 +481,53 @@
 
 		<!-- Vendor -->
 		<script src="{{ URL::to('public/front_assets/vendor/jquery/jquery.min.js')}}"></script>
+
+
+		<!-- uji js custom -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+		        var delay = (function(){
+		          var timer = 0;
+		          return function(callback, ms){
+		          clearTimeout (timer);
+		          timer = setTimeout(callback, ms);
+		         };
+		        })();
+		        //nama tempat
+		        $('#sNamaTempat').keyup(function() {
+		            delay(function(){
+		                alert($('#sNamaTempat').val());
+		            }, 2000);
+		        });
+		        //urutan
+		        $("input[name=urutan]").click(function() {     
+			        alert($("input[name=urutan]:checked").val());
+			    });
+
+			    //star rating
+		        $(".sstar").click(function() {     
+			        alert($(".sstar").val());
+			    });
+
+			    //fasilitas
+			    $(".sfasilitas").click(function() {     
+			        alert($(".sfasilitas").val());
+			    });
+
+			    //fasilitas
+			    $("input[name=skapasitas]").click(function() {     
+			        alert($("input[name=skapasitas]").val());
+			    });
+		    });
+			
+		</script>
+
+
+
+
+
+
+
 	 	<script src="{{ URL::to('public/front_assets/js/jquery.nicescroll.min.js')}}" type="text/javascript"></script>
 
 		<script src="{{ URL::to('public/front_assets/vendor/jquery.appear/jquery.appear.min.js')}}"></script>

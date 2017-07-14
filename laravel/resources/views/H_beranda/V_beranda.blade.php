@@ -182,37 +182,24 @@
 				<div class="home-intro home-intro-tertiary" id="home-intro">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-4">
-								<p>Cari nama atau lokasi gedung</p>
-								<input class="form-control input-lg" placeholder="Ketik nama lokasi atau gedung">
-							</div>
-							<div class="col-md-4">
-								<p>Rentang Tanggal</p>
-								<div class="input-daterange input-group " data-plugin-datepicker>
-									
-									<input type="text" class="form-control input-lg" name="start" value="">
-									<span class="input-group-addon"> <i class="fa fa-calendar"></i> </span>
-									<input type="text" class="form-control input-lg" name="end">
+							<form action="{{URL::to('s')}}" method="post">
+								<input type="hidden" name="_token" value="{{ csrf_token() }}">
+								<div class="col-md-6">
+									<p>Cari nama atau lokasi gedung</p>
+									<input class="form-control input-lg" name="search" placeholder="Ketik nama lokasi atau gedung" required>
 								</div>
-
-							</div>
-							<div class="col-md-2">
-								<p>Hari</p>
-								<select class="form-control input-lg" >
-									<option value="1">1 Hari</option>
-									<option value="2">2 Hari</option>
-									<option value="3">3 Hari</option>
-									<option value="4">4 Hari</option>
-									<option value="5">5 Hari</option>
-									<option value="6">6 Hari</option>
-									<option value="7">7 Hari</option>
-									<option value="8">8 Hari</option>
-									<option value="9">9 Hari</option>
-								</select>
-							</div>
-							<div class="col-md-2">
-								<button class="btn btn-primary btn-lg"><i class="fa fa-search"></i> CARI</button>
-							</div>
+								<div class="col-md-4">
+									<p>Rentang Tanggal</p>
+									<div class="input-daterange input-group " data-plugin-datepicker>
+										<input type="text" class="form-control input-lg" name="start" value="">
+										<span class="input-group-addon"> <i class="fa fa-calendar"></i> </span>
+										<input type="text" class="form-control input-lg" name="end">
+									</div>
+								</div>
+								<div class="col-md-2">
+									<button class="btn btn-primary btn-lg" type="submit"><i class="fa fa-search"></i> CARI</button>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -506,7 +493,6 @@
 
 		<!-- Vendor -->
 		<script src="{{ URL::to('public/front_assets/vendor/jquery/jquery.min.js') }}"></script>
-	 	<!-- <script src="{{ URL::to('public/front_assets/js/jquery.nicescroll.min.js')}}" type="text/javascript"></script> -->
 
 		<script src="{{ URL::to('public/front_assets/vendor/jquery.appear/jquery.appear.min.js')}}"></script>
 		<script src="{{ URL::to('public/front_assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>

@@ -6,11 +6,8 @@ Route::get('/', function () {
 
 // H_beranda
 Route::get('/', 'H_beranda@index');
-
-
-//H_pencarian
-Route::get('s/{daerah}', 'H_pencarian@index');
-
+// H_pencarian
+Route::post('s/', 'H_pencarian@index');
 
 //H_halaman_tambahan
 Route::get('daftar', 'H_halaman_tambahan@view_pendaftaran');

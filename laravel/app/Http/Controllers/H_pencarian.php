@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\M_H_pencarian as mcari;
 use Illuminate\Http\Request;
 
 class H_pencarian extends Controller {
@@ -10,7 +10,13 @@ class H_pencarian extends Controller {
 
 	public function index()
 	{
-		return view('H_pencarian.V_pencarian');
+		$data = mcari::tampil_data_pencarian_gedung();
+		return view('H_pencarian.V_pencarian',['data'=>$data]);
+	}
+
+	public function view_pencarian(){
+		mcari::tampil_data_cari_gedung();
+		// echo json_encode($data);
 	}
 
 	public function create()

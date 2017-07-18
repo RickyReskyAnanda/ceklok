@@ -182,7 +182,7 @@
 				<div class="home-intro home-intro-tertiary" id="home-intro">
 					<div class="container">
 						<div class="row">
-							<form action="{{URL::to('s')}}" method="post">
+							<form action="{{URL::to('result')}}" method="get">
 								<input type="hidden" name="_token" value="{{ csrf_token() }}">
 								<div class="col-md-6">
 									<p>Cari nama atau lokasi gedung</p>

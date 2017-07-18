@@ -7,7 +7,9 @@ Route::get('/', function () {
 // H_beranda
 Route::get('/', 'H_beranda@index');
 // H_pencarian
-Route::post('s/', 'H_pencarian@index');
+Route::get('result/', 'H_pencarian@index');
+Route::get('cari/', 'H_pencarian@view_pencarian');
+Route::get('gedung/{nama}/{id}','H_tempat@index');
 
 //H_halaman_tambahan
 Route::get('daftar', 'H_halaman_tambahan@view_pendaftaran');

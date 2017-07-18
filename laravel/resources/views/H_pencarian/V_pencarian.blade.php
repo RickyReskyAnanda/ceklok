@@ -293,42 +293,46 @@
 												</div>
 												<div class="row">
 													<div class="col-sm-12" style="color:#fa9d00">
-														<div class="checkbox-custom checkbox-default">
-															<input type="checkbox" id="sstar" value="5s">
-															<label><strong>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i></strong>
+														<div class="radio-custom radio-primary">
+															<input type="radio" name="sstar" value="ss" checked>
+															<label>
+																Semua
 															</label>
 														</div>
-														<div class="checkbox-custom checkbox-default">
-															<input type="checkbox" id="sstar" value="4s">
+														<div class="radio-custom radio-primary">
+															<input type="radio" name="sstar" value="s5">
+															<label>
+																@for($i=0;$i<=4;$i++)
+																<i class="fa fa-star"></i>
+																@endfor
+															</label>
+														</div>
+														<div class="radio-custom radio-primary">
+															<input type="radio" name="sstar" value="s4">
+															<label>
+																@for($i=0;$i<=3;$i++)
+																<i class="fa fa-star"></i>
+																@endfor
+															</label>
+														</div>
+														<div class="radio-custom radio-primary">
+															<input type="radio" name="sstar" value="s3">
+															<label>
+																@for($i=0;$i<=2;$i++)
+																<i class="fa fa-star"></i>
+																@endfor
+																
+															</label>
+														</div>
+														<div class="radio-custom radio-primary">
+															<input type="radio" name="sstar" value="s2">
 															<label>
 																<i class="fa fa-star"></i>
 																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
 															</label>
 														</div>
-														<div class="checkbox-custom checkbox-default">
-															<input type="checkbox" id="sstar" value="3s">
-															<label>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-															</label>
-														</div>
-														<div class="checkbox-custom checkbox-default">
-															<input type="checkbox" id="sstar" value="2s">
-															<label>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-															</label>
-														</div>
-														<div class="checkbox-custom checkbox-default">
-															<input type="checkbox" id="sstar" value="1s">
+														<div class="radio-custom radio-primary">
+															<input type="radio" name="sstar" value="s1">
 															<label>
 																<i class="fa fa-star"></i>
 															</label>
@@ -362,7 +366,6 @@
 																Tempat Parkir
 															</label>
 														</div>
-
 													</div>
 												</div>
 											</div>
@@ -380,19 +383,19 @@
 												<div class="row">
 													<div class="col-sm-12">
 														<div class="radio-custom radio-primary">
-															<input type="radio" name="skapasitas" checked>
+															<input type="radio" name="skapasitas" value="1" checked>
 															<label>Semua</label>
 														</div>
 														<div class="radio-custom radio-primary">
-															<input type="radio" name="skapasitas">
+															<input type="radio" name="skapasitas" value="2">
 															<label>10-100</label>
 														</div>
 														<div class="radio-custom radio-primary">
-															<input type="radio" name="skapasitas">
+															<input type="radio" name="skapasitas" value="3">
 															<label>100-1.000</label>
 														</div>
 														<div class="radio-custom radio-primary">
-															<input type="radio" name="skapasitas">
+															<input type="radio" name="skapasitas" value="4">
 															<label>1.000-10.000</label>
 														</div>
 													</div>
@@ -404,8 +407,21 @@
 									</div>
 
 									<!-- ISI PENCARIAN -->
-									<div class="col-sm-8" id="sPencarian">
-										@for ($i = 0; $i < 10; $i++)
+									<div class="col-sm-8">
+										<div class="row" style="margin-top: 20px;">
+							                <div class="col-md-12">
+							                    <div id="dataloader" class="portfolio-load-more-loader">
+							                        <div class="bounce-loader">
+							                            <div class="bounce1"></div>
+							                            <div class="bounce2"></div>
+							                            <div class="bounce3"></div>
+							                        </div>
+							                    </div>
+							                </div>
+							            </div>
+							            <span id="datapencarian">
+							            @if(count($data)>0)
+						            	@foreach ($data as $gedung)
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="featured-box featured-box-primary featured-box-text-left" style="height: auto;">
@@ -417,7 +433,7 @@
 															<div class="col-sm-8">
 																<div class="row" style="margin-top: 5px;">
 																	<div class="col-sm-9">
-																		<h4><strong>Gedung Serbaguna RRI</strong></h4>
+																		<h4><strong>{{ucfirst($gedung->nama_gedung)}}</strong></h4>
 																		<div title="Rated 5.00 out of 5" class="star-rating">
 																			<span style="width:90%"><strong class="rating">5.00</strong> out of 5</span>
 																		</div>
@@ -457,9 +473,17 @@
 											</div>
 										</div>
 									
-										@endfor
+								        @endforeach
+								        @else
+								    		<div class="row">
+												<div class="col-sm-12">
+													<h3 align="center"> Hasil pencarian tidak ada !</h3>
+												</div>
+											</div>    
+								        @endif
 
-										<div class="row" style="margin-top: 20px;">
+							            </span>
+										<div class="row" style="margin-top: 20px;" id="paginasi">
 											<div class="col-sm-6">
 												<button class="btn btn-default pull-right"><i class="fa fa-angle-left fa-lg"></i> Sebelumnya</button>
 											</div>
@@ -469,7 +493,6 @@
 										</div>
 									</div><!-- batas isi pencarian -->
 									
-
 								</div>
 							</div>
 						</div>
@@ -482,10 +505,12 @@
 		<!-- Vendor -->
 		<script src="{{ URL::to('public/front_assets/vendor/jquery/jquery.min.js')}}"></script>
 
-
 		<!-- uji js custom -->
 		<script type="text/javascript">
 			$(document).ready(function(){
+		        pencarianData();
+		        $('#paginasi').hide();
+
 		        var delay = (function(){
 		          var timer = 0;
 		          return function(callback, ms){
@@ -496,37 +521,56 @@
 		        //nama tempat
 		        $('#sNamaTempat').keyup(function() {
 		            delay(function(){
-		                alert($('#sNamaTempat').val());
+		                pencarianData();
 		            }, 2000);
 		        });
 		        //urutan
 		        $("input[name=urutan]").click(function() {     
-			        alert($("input[name=urutan]:checked").val());
+			        pencarianData();
 			    });
 
 			    //star rating
-		        $(".sstar").click(function() {     
-			        alert($(".sstar").val());
+		        $("input[name=sstar]").click(function() {     
+			        pencarianData();
 			    });
-
-			    //fasilitas
-			    $(".sfasilitas").click(function() {     
-			        alert($(".sfasilitas").val());
-			    });
+			    // //fasilitas
+			    // $(".sfasilitas").click(function() {     
+			    //     alert($(".sfasilitas").val());
+			    // });
 
 			    //fasilitas
 			    $("input[name=skapasitas]").click(function() {     
-			        alert($("input[name=skapasitas]").val());
+			        pencarianData();
 			    });
+
+			    function pencarianData(){
+			        var sData 	= [];
+			        sData[0] 	= $("#sNamaTempat").val(); //nama tempat
+			        sData[1] 	= $('input[name=urutan]:checked').val(); //urutannya
+			        sData[2]    = $('input[name=sstar]').val();
+			        //var sFasilitas1 = $('#s_tanggal').val();
+			        sData[3]  	= $('input[name=skapasitas]:checked').val();
+			        //alert(sData);
+			        $('#datapencarian').html('');
+			        $('#dataloader').show();
+
+			        $.ajax({
+			            type:"GET",
+			            url:"{{ URL::to('cari')}}",
+			            data:"sData="+sData,
+			            success:function(hasil) {
+			                $('#datapencarian').html(hasil);
+			                $('#dataloader').hide();
+			            },
+			            error:function(hasil){
+			                alert(hasil);
+			            }
+			        });
+			    }
+
 		    });
 			
 		</script>
-
-
-
-
-
-
 
 	 	<script src="{{ URL::to('public/front_assets/js/jquery.nicescroll.min.js')}}" type="text/javascript"></script>
 
